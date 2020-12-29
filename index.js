@@ -7,10 +7,10 @@ function findMatching(drivers, name) {
 
 function fuzzyMatch(drivers, testString) {
   return drivers.filter( possibleMatch =>
-    possibleMatch.toLowerCase().indexOf(testString.toLowerCase()) === 1
+    possibleMatch.toLowerCase().indexOf(testString.toLowerCase()) === 0
   )
 }
 
-function matchName(source, soughtName) {
-  return source.filter( record => record.name === soughtName)
+function matchName(drivers, testName) {
+  return drivers.filter( record => record.name === testName)
 }
